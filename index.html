@@ -4,7 +4,7 @@
     <meta name="viewport" content="height=device-height, width=device-width, minimum-scale=1.0, maximum-scale=1.0, initial-scale=1.0, user-scalable=0">
     <title></title>
     <meta name="robots" content="max-image-preview:large, INDEX, FOLLOW, ALL">
-    <link rel="stylesheet" id="theme-css" href="assets/css/screen.min.css?ver=1.0.0.alpha.001" type="text/css" media="all">
+    <link rel="stylesheet" id="theme-css" href="assets/css/screen.min.css?ver=1.0.0.alpha.004" type="text/css" media="all">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500&display=swap" rel="stylesheet">
@@ -12,6 +12,9 @@
 </head>
 <body id="theme">
     <header class="header">
+        <div class="header__heder-slide-menu">
+            <a href="javascript:;"><span class="material-symbols-outlined">menu</span></a>
+        </div>
         <a class="header__logo" href="/"><img src="assets/images/logo.svg" alt="Health Connect Plus"></a>
         <div class="header__filters">
             <div class="select select--no-borders">
@@ -40,10 +43,14 @@
                     <span class="material-symbols-outlined">expand_more</span>
                 </div>
             </div>
-            <div class="input">
+            <div class="input header__search-form">
                 <input type="text" name="zip" value="" placeholder="Search by ZIP code">
                 <span class="material-symbols-outlined">search</span>
             </div>
+        </div>
+        <div class="header__mobile-menu">
+            <a href="javascript:;"><span class="material-symbols-outlined">person</span></a>
+            <a href="javascript:;"><span class="material-symbols-outlined">search</span></a>
         </div>
         <div class="header__top-menu">
             <a href="javascript:;">Sign In</a>
@@ -54,11 +61,11 @@
         <section class="filters">
             <div class="filters__tabs">
                 <div class="filters__tab" data-target="tab-filters">
-                    <span class="filters__tab-icon"><img src="assets/images/filters-tab.svg" alt="filters tab"></span>
+                    <span class="filters__tab-icon material-symbols-outlined">page_info</span>
                     <span class="filters__tab-name">Filter</span>
                 </div>
                 <div class="filters__tab filters__tab--active" data-target="tab-categories">
-                    <span class="filters__tab-icon material-symbols-outlined">menu</span>
+                    <span class="filters__tab-icon material-symbols-outlined">layers</span>
                     <span class="filters__tab-name">Categories</span>
                 </div>
             </div>
@@ -89,20 +96,20 @@
                                 <span>Northwestern Memorial Hospital</span>
                                 <img src="assets/images/location-icon.svg" alt="filters tab">
                             </h3>
-                            <div>Medical center </div>
-                            <div>Jf Kennedy Boulevard 65IL US · 847-593-4375</div>
+                            <div class="filter-tab__results-item-type">Medical center </div>
+                            <div class="filter-tab__results-item-address">Jf Kennedy Boulevard 65IL US · 847-593-4375</div>
                         </div>
                         <div class="filter-tab__separation-line"></div>
                         <div class="filter-tab__results-item filter-tab__results-item--active">
                             <h3>
                                 <span>Midwest Express Clinic</span>
-                                <span>
+                                <span class="filter-tab__results-item-bage">
                                     <img src="assets/images/globe-icon.svg" alt="filters tab">
                                     <img src="assets/images/location-icon.svg" alt="filters tab">
                                 </span>
                             </h3>
-                            <div>Medical center </div>
-                            <div>219 W Chicago Ave, Chicago, IL 60654, US · 847-593-4375</div>
+                            <div class="filter-tab__results-item-type">Medical center </div>
+                            <div class="filter-tab__results-item-address">219 W Chicago Ave, Chicago, IL 60654, US · 847-593-4375</div>
                         </div>
                         <div class="filter-tab__separation-line"></div>
                         <div class="filter-tab__results-item">
@@ -110,8 +117,8 @@
                                 <span>Outpatient Care Center</span>
                                 <img src="assets/images/location-icon.svg" alt="filters tab">
                             </h3>
-                            <div>Medical center </div>
-                            <div>219 W Chicago Ave, Chicago, IL 60654, US · 847-593-4375</div>
+                            <div class="filter-tab__results-item-type">Medical center </div>
+                            <div class="filter-tab__results-item-address">219 W Chicago Ave, Chicago, IL 60654, US · 847-593-4375</div>
                         </div>
                         <div class="filter-tab__separation-line"></div>
                         <div class="filter-tab__fade-out"></div>
@@ -134,7 +141,7 @@
                             <div class="filter-tab__category-name">Family Physicians</div>
                             <div class="filter-tab__category-desc">22,563 listings</div>
                         </div>
-                        <span class="material-symbols-outlined">arrow_right_alt</span>
+                        <span class="material-symbols-outlined">trending_flat</span>
                     </div>
                     <div class="filter-tab__category filter-tab__category--active">
                         <div class="filter-tab__category-icon filter-tab__category-icon--dental">
@@ -154,7 +161,7 @@
                             <div class="filter-tab__category-name">Counselling & Psychotherapy</div>
                             <div class="filter-tab__category-desc">8,482 listings</div>
                         </div>
-                        <span class="material-symbols-outlined">arrow_right_alt</span>
+                        <span class="material-symbols-outlined">trending_flat</span>
                     </div>
                     <div class="filter-tab__category">
                         <div class="filter-tab__category-icon filter-tab__category-icon--chiropractors">
@@ -164,7 +171,7 @@
                             <div class="filter-tab__category-name">Chiropractors</div>
                             <div class="filter-tab__category-desc">22,563 listings</div>
                         </div>
-                        <span class="material-symbols-outlined">arrow_right_alt</span>
+                        <span class="material-symbols-outlined">trending_flat</span>
                     </div>
                     <div class="filter-tab__category">
                         <div class="filter-tab__category-icon filter-tab__category-icon--eye">
@@ -174,7 +181,7 @@
                             <div class="filter-tab__category-name">Eye Care Professionals </div>
                             <div class="filter-tab__category-desc">12,053 listings</div>
                         </div>
-                        <span class="material-symbols-outlined">arrow_right_alt</span>
+                        <span class="material-symbols-outlined">trending_flat</span>
                     </div>
                     <div class="filter-tab__category">
                         <div class="filter-tab__category-icon filter-tab__category-icon--counselling">
@@ -184,7 +191,7 @@
                             <div class="filter-tab__category-name">Counselling & Psychotherapy</div>
                             <div class="filter-tab__category-desc">8,482 listings</div>
                         </div>
-                        <span class="material-symbols-outlined">arrow_right_alt</span>
+                        <span class="material-symbols-outlined">trending_flat</span>
                     </div>
                 </div>
             </div>
@@ -193,6 +200,7 @@
         </section>
     </div>
     <footer class="footer">
+        &copy; Health Connect Plus 2023
     </footer>
     <script type="text/javascript" src="https://code.jquery.com/jquery-3.6.4.min.js" id="jquery-js"></script>
     <script type="text/javascript" src="assets/js/healthconnectplus.min.js?ver=1.0.0.alpha.001" id="app-js"></script>

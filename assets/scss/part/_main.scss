@@ -24,9 +24,12 @@ body {
     flex-direction: column;
     background-color: $color-white;
     font-family: $theme-font-1;
-    font-size: 16px;
+    font-size: 14px;
     color: $color-black-ink;
-    height: 100%;
+    min-height: 100%;
+    @media (min-width: 992px) {
+        font-size: 16px;
+    }
 }
 
 * {
@@ -38,9 +41,9 @@ body {
 }
 
 .container {
-    padding: 0 20px;
-    @media (min-width: 1200px) {
-        padding: 0 0 0 105px;
+    padding: 0 15px;
+    @media (min-width: 992px) {
+        padding: 0 0 0 30px;
     }
 }
 
@@ -126,7 +129,6 @@ textarea {}
     padding: 0 20px 0 20px;
     align-items: center;
     justify-content: space-between;
-    width: 375px;
     border-radius: $border-radius;
     border: solid $color-blue 1px;
     input {
@@ -135,6 +137,17 @@ textarea {}
         color: $color-black-ink;
         outline: 0;
         line-height: 48px;
+        width: 196px;
+        @media (min-width: 1300px) {
+            width: 300px;
+        }
+        &:link,
+        &:active,
+        &:visited,
+        &:hover,
+        &:focus {
+            outline: 0;
+        }
     }
     span {
         color: $color-blue;
@@ -142,8 +155,12 @@ textarea {}
     &--type-2 {
         border-color: #C9D3E0;
         width: 100%;
+        &:focus-within {
+            border-color: $color-blue;
+        }
         input {
             line-height: 68px;
+            width: 100%;
         }
         span {
             display: flex;
@@ -163,13 +180,11 @@ textarea {}
     display: flex;
     position: relative;
     flex-wrap: nowrap;
-    flex-direction: row;
+    flex-direction: column;
+    gap: 30px;
     min-height: calc(100vh - 92px);
-}
-
-.map {
-    display: block;
-    width: calc(100% - 650px);
-    height: 100%;
-    background-color: $color-light-gray;
+    @media (min-width: 768px) {
+        flex-direction: row;
+        gap: 0;
+    }
 }

@@ -1,1 +1,17 @@
 @import 'search-page/filters';
+
+.map {
+    display: block;
+    width: 100%;
+    min-height: 100%;
+    background-color: $color-light-gray;
+    height: 70vh;
+    @media (min-width: 768px) {
+        height: calc(100vh - 92px);
+        width: 50%;
+        height: auto;
+    }
+    @media (min-width: 1200px) {
+        width: 70%;
+    }
+}

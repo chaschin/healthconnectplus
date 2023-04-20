@@ -1,28 +1,102 @@
 .header {
     display: flex;
     flex-direction: row;
-    gap: 60px;
-    padding: 20px 120px;
+    gap: 15px;
+    padding: 20px 30px;
     align-items: center;
-    &__filters {
-        display: flex;
-        flex-direction: row;
+    justify-content: space-between;
+    @media (min-width: 576px) {
         gap: 30px;
     }
-    &__top-menu {
+    @media (min-width: 768px) {
+        gap: 60px;
+    }
+    @media (min-width: 1200px) {
+        justify-content: flex-start;
+    }
+    &__logo {
+        img {
+            width: 150px;
+            @media (min-width: 768px) {
+                width: auto;
+            }
+        }
+    }
+    &__filters {
+        display: none;
+        flex-direction: row;
+        gap: 30px;
+        @media (min-width: 992px) {
+            display: flex;
+        }
+    }
+    &__heder-slide-menu {
+        display: inline-block;
+        @media (min-width: 992px) {
+            display: none;
+        }
+        a {
+            text-decoration: none;
+            color: $color-black-ink;
+            &:active,
+            &:focus,
+            &:link,
+            &:visited,
+            &:hover {
+                text-decoration: none;
+                color: $color-black-ink;
+            }
+            .material-symbols-outlined {
+                font-size: 24px;
+                font-weight: bold;
+            }
+        }
+    }
+    &__mobile-menu {
         display: flex;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        gap: 15px;
+        @media (min-width: 1200px) {
+            display: none;
+        }
+        a {
+            text-decoration: none;
+            color: $color-black-ink;
+            &:active,
+            &:focus,
+            &:link,
+            &:visited,
+            &:hover {
+                text-decoration: none;
+                color: $color-black-ink;
+            }
+            .material-symbols-outlined {
+                font-size: 24px;
+                font-weight: bold;
+            }
+        }
+    }
+    &__top-menu {
+        display: none;
         flex-direction: row;
         align-items: center;
         gap: 30px;
         margin-left: auto;
         font-weight: 500;
+        @media (min-width: 1200px) {
+            display: flex;
+        }
         &--add-your-business {
-            display: inline-block;
+            display: none;
             color: $color-white;
             background-color: $color-blue;
             padding: 10px 40px;
             border-radius: 77px;
             text-decoration: none;
+            @media (min-width: 1600px) {
+                display: inline-block;
+            }
             &:active,
             &:focus,
             &:link,
@@ -31,6 +105,12 @@
                 text-decoration: none;
                 color: $color-white;
             }
+        }
+    }
+    &__search-form {
+        display: none;
+        @media (min-width: 1200px) {
+            display: flex;
         }
     }
 }
