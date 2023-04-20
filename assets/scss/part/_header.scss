@@ -1,0 +1,36 @@
+.header {
+    display: flex;
+    flex-direction: row;
+    gap: 60px;
+    padding: 20px 120px;
+    align-items: center;
+    &__filters {
+        display: flex;
+        flex-direction: row;
+        gap: 30px;
+    }
+    &__top-menu {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        gap: 30px;
+        margin-left: auto;
+        font-weight: 500;
+        &--add-your-business {
+            display: inline-block;
+            color: $color-white;
+            background-color: $color-blue;
+            padding: 10px 40px;
+            border-radius: 77px;
+            text-decoration: none;
+            &:active,
+            &:focus,
+            &:link,
+            &:visited,
+            &:hover {
+                text-decoration: none;
+                color: $color-white;
+            }
+        }
+    }
+}

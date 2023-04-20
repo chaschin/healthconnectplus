@@ -1,0 +1,221 @@
+.filters {
+    display: flex;
+    flex-direction: column;
+    padding-left: 100px;
+    width: 650px;
+    padding-top: 40px;
+    padding-right: 40px;
+    gap: 40px;
+    &__tabs {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        align-items: center;
+        justify-content: center;
+        gap: 60px;
+    }
+    &__tab {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        align-items: center;
+        justify-content: space-between;
+        gap: 10px;
+        font-size: 18px;
+        color: $color-blue;
+        padding: 4px 60px;
+        cursor: pointer;
+        &--active {
+            color: $color-black-ink;
+            background-color: $color-light-gray;
+            border-radius: 68px;
+        }
+    }
+}
+
+.filter-tab {
+    display: none;
+    &--active {
+        display: block;
+    }
+    &__content {
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+        padding-bottom: 40px;
+    }
+    &__option {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        align-items: center;
+        gap: 10px;
+        background-color: $color-light-gray;
+        line-height: 48px;
+        font-weight: 500;
+        padding: 0 20px;
+        border-radius: 77px;
+        span {
+            color: $color-blue;
+            font-size: 16px;
+            cursor: pointer;
+            font-weight: bold;
+        }
+    }
+    &__category {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        gap: 20px;
+        padding: 20px;
+        border: solid #C9D3E0 1px;
+        border-radius: $border-radius;
+        align-items: center;
+        .material-symbols-outlined {
+            margin-left: auto;
+            color: #A0AFC0;
+        }
+        &--active {
+            border-color: $color-blue;
+            .material-symbols-outlined {
+                color: $color-blue;
+                font-size: 42px;
+            }
+        }
+    }
+    &__category-info {
+        display: flex;
+        flex-direction: column;
+        gap: 5px;
+    }
+    &__category-name {
+        font-weight: 500;
+        font-size: 22px;
+    }
+    &__category-desc {
+        font-size: 14px;
+    }
+    &__category-title {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        gap: 20px;
+        padding: 20px;
+        span {
+            color: $color-blue;
+        }
+    }
+    &__category-title-text {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        gap: 10px;
+        font-size: 20px;
+        font-weight: 500;
+        align-items: center;
+        span {
+            color: $color-blue;
+        }
+    }
+    &__category-icon {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        width: 54px;
+        height: 54px;
+        border-radius: 10px;
+        &--family {
+            background-color: #E8E1F6;
+            border: solid #E8E1F6 1px;
+        }
+        &--dental {
+            background-color: #DBF1E0;
+            border: solid #54BA6B 1px;
+        }
+        &--counselling {
+            background-color: #F6DBCE;
+            border: solid #F6DBCE 1px;
+        }
+        &--chiropractors {
+            background-color: #CCE6FE;
+            border: solid #CCE6FE 1px;
+        }
+        &--eye {
+            background-color: #FEF4DB;
+            border: solid #FEF4DB 1px;
+        }
+    }
+    &__location {
+        display: flex;
+        flex-direction: column;
+        border-radius: 10px;
+    }
+    &__results {
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+    }
+    &__results-item {
+        padding: 20px;
+        border-radius: $border-radius;
+        &--active {
+            background-color: #F0F5FF;
+        }
+        h3 {
+            display: flex;
+            flex-direction: row;
+            flex-wrap: nowrap;
+            justify-content: space-between;
+            gap: 20px;
+            align-items: center;
+            font-size: 22px;
+            margin: 0;
+            padding-bottom: 10px;
+        }
+    }
+    &__separation-line {
+        display: block;
+        height: 1px;
+        line-height: 0;
+        font-size: 0;
+        background-color: #C9D3E0;
+    }
+    &__fade-out {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        position: absolute;
+        bottom: 0;
+        width: 100%;
+        height: 300px;
+        background: linear-gradient(to bottom, rgba(255,255,255,0) 0%,rgba(255,255,255,1) 100%);
+    }
+    &__more-places {
+        position: relative;
+        z-index: 10;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+    }
+    &__more-places-button {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        align-items: center;
+        gap: 10px;
+        background-color: $color-light-gray;
+        line-height: 48px;
+        font-weight: 500;
+        padding: 0 70px;
+        border-radius: 77px;
+        cursor: pointer;
+        &--icon {
+            font-size: 16px;
+            cursor: pointer;
+            font-weight: bold;
+        }
+    }
+}

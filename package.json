@@ -1,0 +1,47 @@
+{
+    "name": "healthconnectplus",
+    "description": "Health Connect Plus",
+    "license": "GNU General Public License v2.0",
+    "private": true,
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/chaschin/healthconnectplus/"
+    },
+    "version": "1.0.0",
+    "keywords": [
+        "css",
+        "sass",
+        "mobile-first",
+        "responsive",
+        "front-end",
+        "web"
+    ],
+    "homepage": "https://github.com/chaschin",
+    "author": "Alexey Chaschin",
+    "jsoutput": "assets/js-output",
+    "cssoutput": "assets/css-output",
+    "jsdest": "assets/js",
+    "cssdest": "assets/css",
+    "devDependencies": {
+        "@lodder/grunt-postcss": "^3.1.1",
+        "autoprefixer": "^10.4.1",
+        "cssnano": "^5.0.14",
+        "grunt": "^1.4.1",
+        "grunt-contrib-clean": "^2.0.0",
+        "grunt-contrib-concat": "^2.0.0",
+        "grunt-contrib-sass": "^2.0.0",
+        "grunt-contrib-uglify": "^5.0.1",
+        "load-grunt-tasks": "^5.1.0",
+        "pixrem": "^5.0.0",
+        "postcss": "^8.4.5"
+    },
+    "engines": {
+        "node": "latest"
+    },
+    "browserslist": [
+        "> 0.5%",
+        "last 2 versions",
+        "Firefox ESR",
+        "not dead"
+    ]
+}
